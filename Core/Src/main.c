@@ -105,6 +105,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  //THIS IS A TEST from fer
 	  //This code is used to test the RTC configuration
 //	  uint16_t year = 0;
 //	  uint8_t month = 0, day = 0, weekday = 0, hh = 0, mm= 0, ss = 0;
