@@ -99,6 +99,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TEMPSen_Init();
   HAL_RTC_Init();
+  //TEST fer
   /* USER CODE END 2 */
 
   /* Infinite loop */
