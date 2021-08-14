@@ -105,7 +105,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   HAL_POT_Init();
-
+//LCD START
 
   while (1)
   {

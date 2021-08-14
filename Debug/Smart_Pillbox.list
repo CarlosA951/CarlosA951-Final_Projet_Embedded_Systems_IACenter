@@ -2328,7 +2328,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   HAL_POT_Init();
  8000ea4:	f001 f8be 	bl	8002024 <HAL_POT_Init>
-
+//LCD START
 
   while (1)
   {
