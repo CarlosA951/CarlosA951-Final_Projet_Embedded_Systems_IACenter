@@ -40,6 +40,7 @@ extern "C" {
 #include "stm32f3xx_ll_pwr.h"
 #include "stm32f3xx_ll_dma.h"
 #include "stm32f3xx_ll_rtc.h"
+#include "stm32f3xx_ll_spi.h"
 #include "stm32f3xx_ll_gpio.h"
 
 #if defined(USE_FULL_ASSERT)
@@ -74,6 +75,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LCD_RESET_Pin LL_GPIO_PIN_6
+#define LCD_RESET_GPIO_Port GPIOA
+#define LCD_A0_Pin LL_GPIO_PIN_8
+#define LCD_A0_GPIO_Port GPIOA
+#define LCD_CS_N_Pin LL_GPIO_PIN_6
+#define LCD_CS_N_GPIO_Port GPIOB
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,
                                                                  4 bits for subpriority */

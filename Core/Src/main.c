@@ -104,9 +104,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_POT_Init();
+
+
   while (1)
   {
-	  //THIS IS A TEST from fer
+	  POT1_Value=HAL_POT_Percentage(POT1_Channel);
+	  //test the integration of spi
 	  //This code is used to test the RTC configuration
 //	  uint16_t year = 0;
 //	  uint8_t month = 0, day = 0, weekday = 0, hh = 0, mm= 0, ss = 0;
@@ -127,6 +131,9 @@ int main(void)
 //	  LL_mDelay(150);
 //	  /*-------------------------------------------------------------------------*/
 //    /* USER CODE BEGIN 3 */
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -179,7 +186,7 @@ void SystemClock_Config(void)
   }
   LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
   LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
-  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
+  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_16);
   LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);
 
    /* Wait till System clock is ready */
