@@ -23,6 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "HAL_RGB.h"
+#include "HAL_FSM.h"
 #include "HAL_POT.h"
 #include "HAL_TEMPSen.h"
 #include "HAL_RTC.h"
@@ -110,6 +112,7 @@ int main(void)
   while (1)
   {
 	  POT1_Value=HAL_POT_Percentage(POT1_Channel);
+	  fsm();
 	  //test the integration of spi
 	  //This code is used to test the RTC configuration
 //	  uint16_t year = 0;
@@ -131,6 +134,10 @@ int main(void)
 //	  LL_mDelay(150);
 //	  /*-------------------------------------------------------------------------*/
 //    /* USER CODE BEGIN 3 */
+
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
