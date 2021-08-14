@@ -111,8 +111,9 @@ int main(void)
 
   while (1)
   {
-
-	  fsm();
+	  short btnu = MX_Joystick_Up();
+	  short btnd = MX_Joystick_Down();
+	  fsm(btnu,btnd);
 	  //prueba
 	  POT1_Value=HAL_POT_Percentage(POT1_Channel);
 	  //test the integration of spi

@@ -13,4 +13,4 @@ void EDO_4(int,int);
 void EDO_5(int,int);
 void EDO_6(int,int);
 
-void fsm();
+void fsm(short,short);

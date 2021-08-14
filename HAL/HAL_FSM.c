@@ -123,8 +123,8 @@ FSM MDE[] = {
 		{E6,EDO_6}
 };
 
-void fsm(){
-	MDE[EA].func(MX_Joystick_Up(),MX_Joystick_Down());
+void fsm(short btnu, short btnd){
+	MDE[EA].func(btnu,btnd);
 }
 //LL_GPIO_SetOutputPin(GPIOA,LD2_Pin);
 //LL_mDelay(300);
