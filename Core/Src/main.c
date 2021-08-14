@@ -103,7 +103,9 @@ int main(void)
   while (1)
   {
 	  fsm();
-	/* USER CODE END WHILE */
+//test
+
+	  /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
