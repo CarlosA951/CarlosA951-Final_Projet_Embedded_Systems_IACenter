@@ -38,7 +38,26 @@ extern "C" {
 void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+/*
+ * This file contains the hardware abstraction
+ * functions for the Joystick and RGB using the
+ */
+/*
+ * Funciones para lectura de joystick devuelven un short 0 o 1 segun el
+ * estado del boton
+ */
+short MX_Joystick_Up(void);
+short MX_Joystick_Down(void);
+short MX_Joystick_Right(void);
+short MX_Joystick_Left(void);
+short MX_Joystick_Center(void);
+/*
+ * Funcion para activar/desactivar el led rgb, recibe un short 0 o 1 segun
+ * el estado deseado
+ */
+void MX_RGB_Red(short);
+void MX_RGB_Green(short);
+void MX_RGB_Blue(short);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

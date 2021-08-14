@@ -23,10 +23,15 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+<<<<<<< HEAD
 #include "HAL_POT.h"
 #include "HAL_TEMPSen.h"
 #include "HAL_RTC.h"
 #include "HAL_LCD.h"
+=======
+#include "HAL_RGB.h"
+#include "HAL_FSM.h"
+>>>>>>> main
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,7 +75,6 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -101,13 +105,17 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   HAL_TEMPSen_Init();
+<<<<<<< HEAD
   HAL_RTC_Init();
   HAL_LCD_Init();
   //TEST fer
+=======
+>>>>>>> main
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+<<<<<<< HEAD
   HAL_POT_Init();
 //LCD START
 uint8_t pot=0;
@@ -137,16 +145,24 @@ uint8_t pot=0;
 //	  /*-------------------------------------------------------------------------*/
 //    /* USER CODE BEGIN 3 */
     /* USER CODE END WHILE */
+=======
+  while (1)
+  {
+	  fsm();
+//test
+>>>>>>> main
+
+	  /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+<<<<<<< HEAD
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 //    /* USER CODE END WHILE */
 
+=======
+>>>>>>> main
   }
   /* USER CODE END 3 */
 }
@@ -169,21 +185,6 @@ void SystemClock_Config(void)
 
   }
   LL_RCC_HSI_SetCalibTrimming(16);
-  LL_RCC_LSI_Enable();
-
-   /* Wait till LSI is ready */
-  while(LL_RCC_LSI_IsReady() != 1)
-  {
-
-  }
-  LL_PWR_EnableBkUpAccess();
-  if(LL_RCC_GetRTCClockSource() != LL_RCC_RTC_CLKSOURCE_LSI)
-  {
-    LL_RCC_ForceBackupDomainReset();
-    LL_RCC_ReleaseBackupDomainReset();
-    LL_RCC_SetRTCClockSource(LL_RCC_RTC_CLKSOURCE_LSI);
-  }
-  LL_RCC_EnableRTC();
   LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSI_DIV_2, LL_RCC_PLL_MUL_16);
   LL_RCC_PLL_Enable();
 
@@ -194,7 +195,7 @@ void SystemClock_Config(void)
   }
   LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
   LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
-  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_16);
+  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
   LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);
 
    /* Wait till System clock is ready */
