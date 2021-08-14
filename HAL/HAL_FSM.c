@@ -17,7 +17,7 @@ Estados EA = E0;
 // Funciones por estado
 void EDO_0(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("rojo");
+	rgb_rojo();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -30,7 +30,7 @@ void EDO_0(int btnU, int btnD){
 
 void EDO_1(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("verde");
+	rgb_verde();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -43,7 +43,7 @@ void EDO_1(int btnU, int btnD){
 
 void EDO_2(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("azul");
+	rgb_azul();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -56,7 +56,7 @@ void EDO_2(int btnU, int btnD){
 
 void EDO_3(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("amarillo");
+	rgb_amarillo();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -69,7 +69,7 @@ void EDO_3(int btnU, int btnD){
 
 void EDO_4(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("celeste");
+	rgb_celeste();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -82,7 +82,7 @@ void EDO_4(int btnU, int btnD){
 
 void EDO_5(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("morado");
+	rgb_morado();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -95,7 +95,7 @@ void EDO_5(int btnU, int btnD){
 
 void EDO_6(int btnU, int btnD){
 	// Codigo de estado inicio
-	rgb("blanco");
+	rgb_blanco();
 	// Codigo de estado fin
 	// Cambio de estado
 	if(btnU == 1 && btnU != btnUa && btnD == 0)
@@ -123,7 +123,9 @@ FSM MDE[] = {
 		{E6,EDO_6}
 };
 
-
+void fsm(){
+	MDE[EA].func(MX_Joystick_Up(),MX_Joystick_Down());
+}
 //LL_GPIO_SetOutputPin(GPIOA,LD2_Pin);
 //LL_mDelay(300);
 //LL_GPIO_ResetOutputPin(GPIOA,LD2_Pin);
