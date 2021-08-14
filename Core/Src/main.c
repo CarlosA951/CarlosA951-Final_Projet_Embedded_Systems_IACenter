@@ -23,6 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "HAL_FSM.h"
+#include "HAL_RGB.h"
 #include "HAL_POT.h"
 #include "HAL_TEMPSen.h"
 #include "HAL_RTC.h"
@@ -109,6 +111,8 @@ int main(void)
 
   while (1)
   {
+
+	  fsm();
 	  //prueba
 	  POT1_Value=HAL_POT_Percentage(POT1_Channel);
 	  //test the integration of spi
@@ -132,6 +136,9 @@ int main(void)
 //	  LL_mDelay(150);
 //	  /*-------------------------------------------------------------------------*/
 //    /* USER CODE BEGIN 3 */
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

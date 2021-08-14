@@ -75,10 +75,26 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define J_RIGHT_Pin LL_GPIO_PIN_0
+#define J_RIGHT_GPIO_Port GPIOC
+#define J_LEFT_Pin LL_GPIO_PIN_1
+#define J_LEFT_GPIO_Port GPIOC
+#define J_UP_Pin LL_GPIO_PIN_4
+#define J_UP_GPIO_Port GPIOA
 #define LCD_RESET_Pin LL_GPIO_PIN_6
 #define LCD_RESET_GPIO_Port GPIOA
+#define J_DOWN_Pin LL_GPIO_PIN_0
+#define J_DOWN_GPIO_Port GPIOB
+#define LED_G_Pin LL_GPIO_PIN_7
+#define LED_G_GPIO_Port GPIOC
 #define LCD_A0_Pin LL_GPIO_PIN_8
 #define LCD_A0_GPIO_Port GPIOA
+#define LED_B_Pin LL_GPIO_PIN_9
+#define LED_B_GPIO_Port GPIOA
+#define LED_R_Pin LL_GPIO_PIN_4
+#define LED_R_GPIO_Port GPIOB
+#define J_CENTER_Pin LL_GPIO_PIN_5
+#define J_CENTER_GPIO_Port GPIOB
 #define LCD_CS_N_Pin LL_GPIO_PIN_6
 #define LCD_CS_N_GPIO_Port GPIOB
 #ifndef NVIC_PRIORITYGROUP_0
