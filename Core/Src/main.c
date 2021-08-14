@@ -109,6 +109,7 @@ int main(void)
 
   while (1)
   {
+	  //prueba
 	  POT1_Value=HAL_POT_Percentage(POT1_Channel);
 	  //test the integration of spi
 	  //This code is used to test the RTC configuration
