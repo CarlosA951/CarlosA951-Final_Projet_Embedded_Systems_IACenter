@@ -26,7 +26,6 @@
 #include "HAL_POT.h"
 #include "HAL_TEMPSen.h"
 #include "HAL_RTC.h"
-#include "HAL_LCD.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,8 +58,6 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 	uint16_t POT1_Value = 0;
 	uint8_t Temp = 0;
-	uint8_t configuredRTC=0;
-	uint8_t numberAlarmsSet=0;
 /* USER CODE END 0 */
 
 /**
@@ -94,7 +91,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+//
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -102,19 +99,17 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TEMPSen_Init();
   HAL_RTC_Init();
-  HAL_LCD_Init();
   //TEST fer
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   HAL_POT_Init();
-//LCD START
-uint8_t pot=0;
+
+
   while (1)
   {
-	  pot=HAL_POT_Percentage(POT1_Channel);
-	  HAL_LCD_WELCOME_ENTER_TIME(&pot,0,0);
+	  POT1_Value=HAL_POT_Percentage(POT1_Channel);
 	  //test the integration of spi
 	  //This code is used to test the RTC configuration
 //	  uint16_t year = 0;
@@ -136,9 +131,6 @@ uint8_t pot=0;
 //	  LL_mDelay(150);
 //	  /*-------------------------------------------------------------------------*/
 //    /* USER CODE BEGIN 3 */
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
